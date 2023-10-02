@@ -5,10 +5,11 @@
    --red:#e74c3c;
    --orange:#f39c12;
    --light-color:#888;
-   --light-bg:#eee;
+   --light-bg:#f6f9ff;
    --black:#2c3e50;
    --white:#fff;
    --border:.1rem solid #000;
+   
 }
 
 *{
@@ -418,7 +419,7 @@ section{
    flex-wrap: wrap;
    gap:1.5rem;
 }
-
+/*============================== */
 .about .row .image{
    flex: 1 1 40rem;
 }
@@ -524,6 +525,133 @@ section{
    color:var(--orange);
 }
 
+/*=================================== form section start =======================================*/
+.flex-container {
+   display: flex;
+}
+
+.container_1 {
+   flex: 1;
+   background-color: #ffcc00;/*Thiswillmakecontainer_1takeuptheavailablespace*/
+   padding: 20px ;/*Justanexamplebackgroundcolor*/
+   margin: 0 10px 20px 0;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+.container_2 {
+   flex: 1; /* This will make container_2 take up the available space */
+   background-color: #66ccff; /* Just an example background color */
+   padding: 20px ;
+   margin: 0 0 20px 10px;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+ 
+
+.formbold-mb-5 {
+   margin-bottom: 20px;
+ }
+ .formbold-pt-3 {
+   padding-top: 12px;
+ }
+ .formbold-main-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 48px;
+ }
+
+ .formbold-form-wrapper {
+   margin: 0 auto;
+   width: 100%;
+   background: var(--light-bg);
+ }
+ .formbold-form-label {
+   display: block;
+   font-weight: 500;
+   font-size: 16px;
+   color: #07074d;
+   margin-bottom: 12px;
+ }
+ .formbold-form-label-2 {
+   font-weight: 600;
+   font-size: 20px;
+   margin-bottom: 20px;
+ }
+
+ .formbold-form-input {
+   width: 100%;
+   padding: 12px 24px;
+   border-radius: 6px;
+   border: 1px solid #e0e0e0;
+   background: white;
+   font-weight: 500;
+   font-size: 16px;
+   color: #6b7280;
+   outline: none;
+   resize: none;
+ }
+ .formbold-form-input:focus {
+   border-color: #6a64f1;
+   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+ }
+ .button-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 20px; 
+}
+ .formbold-btn {
+   flex: 1;
+   text-align: center;
+   margin: 10px;
+   font-size: 16px;
+   border-radius: 6px;
+   padding: 14px 32px;
+   border: none;
+   font-weight: 600;
+   background-color: #6a64f1;
+   color: white;
+   width: 50%;
+   cursor: pointer;
+ }
+ .formbold-btn:hover {
+   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+ }
+
+ .formbold--mx-3 {
+   margin-left: -12px;
+   margin-right: -12px;
+ }
+ .formbold-px-3 {
+   padding-left: 12px;
+   padding-right: 12px;
+ }
+ .flex {
+   display: flex;
+ }
+ .flex-wrap {
+   flex-wrap: wrap;
+ }
+ .w-full {
+   width: 100%;
+ }
+ @media (min-width: 540px) {
+   .sm\:w-half {
+     width: 50%;
+   }
+ }
+
+
+/*=================================== form section ends =======================================*/
 .courses .box-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -536,6 +664,10 @@ section{
    border-radius: .5rem;
    background-color: var(--white);
    padding: 2rem;
+   -webkit-border-radius: .5rem;
+   -moz-border-radius: .5rem;
+   -ms-border-radius: .5rem;
+   -o-border-radius: .5rem;
 }
 
 .courses .box-container .box .tutor{
@@ -803,7 +935,7 @@ section{
    align-items: center;
    gap: 2rem;
    margin-bottom: 1rem;
-}
+}var(--black)
 
 .watch-video .video-container .tutor img{
    border-radius: 50%;

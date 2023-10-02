@@ -62,3 +62,23 @@ window.onscroll = () =>{
       body.classList.remove('active');
    }
 }
+document.addEventListener("DOMContentLoaded", function() {
+   var checkbox = document.getElementById("checkbox");
+   var inputFieldsContainer = document.querySelector(".input-fields-container");
+
+   // By default, hide the input fields container
+   inputFieldsContainer.style.display = "none";
+
+   // Add event listener to the checkbox
+   checkbox.addEventListener("change", function() {
+       // If checkbox is checked, show the input fields container
+       if (checkbox.checked) {
+           inputFieldsContainer.style.display = "block";
+       } else {
+           // If checkbox is unchecked, hide the input fields container
+           inputFieldsContainer.style.display = "none";
+       }
+   });
+});
+
+
