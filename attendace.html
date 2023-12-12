@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Attendance</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">ACGCET-EEE</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="./assets/img/pic-1.jpg" class="image" alt="">
+         <h3 class="name">shaikh anas</h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="register.html" class="option-btn">register</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="./assets/img/pic-1.jpg" class="image" alt="">
+      <h3 class="name">shaikh anas</h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+    <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+    <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
+    <a href="biodata.html"><i class="fas fa-question"></i><span>Bio data</span></a>
+    <a href="attendace.html"><i class="fas fa-chalkboard-user"></i><span>Attendance</span></a>
+    <a href="sem.html"><i class="fas fa-chalkboard-user"></i><span>Semester Performance</span></a>
+    <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+    <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
+    <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+
+<section class="attendace_container">
+
+  <h1 class="heading">Your Attendance Performance</h1>
+
+  <div class="attendance-container">
+   <h1 class="header-attendance">19MEE26 - Industrial Engineering and Management</h1>
+   <div class="attendance">
+      <div class="inner_attendance_container">
+         <div class="outer">
+            <div class="inner">
+               <div id="attendancePercentage">
+            
+               </div>
+            </div>
+         </div>
+         <h3 class="attendance_h3">Attendance %</h3>
+         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+         </svg>
+      </div>
+      <div class="inner_attendance_container">
+         <div class="outer">
+             <div class="inner">
+                 <div id="presentsPercentage">
+                     
+                 </div>
+             </div>
+         </div>
+         <h3 class="attendance_h3">No of Presents</h3>
+         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+             <defs>
+                 <linearGradient id="GradientColorPresents">
+                     <stop offset="0%" stop-color="#e91e63" />
+                     <stop offset="100%" stop-color="#673ab7" />
+                 </linearGradient>
+             </defs>
+             <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+         </svg>
+     </div>
+     
+  </div>
+    <style>
+      :root {
+         --ca: 0;
+      }
+      .attendance-container{
+        height: 1200vh;
+        width: 100%;
+        padding: 10PX;
+      }
+      .attendance{
+            width: 160px;
+            height: 160px;
+            margin-left: -50px;
+            background: ;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            
+      }
+      .inner_attendance_container {
+    height: 240px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:  10px 100px; /* Adjust margin as needed */
+    position: relative; /* Ensure relative positioning */
+}
+
+.inner_attendance_container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inner_attendance_container circle {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: anim 2s linear forwards;
+    -webkit-animation: anim 2s linear forwards;
+}
+
+.inner_attendance_container:nth-child(2) circle {
+    stroke: url(#GradientColorPresents); /* Use the second gradient for the right container */
+}
+
+#presentsPercentage {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #555;
+}
+
+/* Add animation for No of Presents container */
+.inner_attendance_container:nth-child(2) circle {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: anim 2s linear forwards;
+    -webkit-animation: anim 2s linear forwards;
+}
+
+
+.outer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                        -0.5px -0.5px 0px rgba(255,255,255,1),
+                            0.5px 0.5px 0px rgba(0,0,0,0.15),
+                                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+
+#attendancePercentage {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #555;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: anim 2s linear forwards;
+    -webkit-animation: anim 2s linear forwards;
+}
+
+
+      svg{
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+      @keyframes anim {
+        100% {
+            stroke-dashoffset: var(--ca);
+        }
+    }
+
+    </style>
+          
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2023 by <span>ACGCET-EEE</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="./assets/script/script.js"></script>
+
+   
+</body>
+</html>
